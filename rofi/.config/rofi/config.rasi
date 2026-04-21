@@ -1,0 +1,126 @@
+configuration {
+    modi: "drun,run,window";
+    font: "JetBrainsMonoNL Nerd Font 12";
+    lines: 10;
+    columns: 2;
+    width: 50;
+    location: 0;
+    yoffset: 0;
+    xoffset: 0;
+    matching: "fuzzy";
+    display-drun: "  Apps";
+    display-run: "  Run";
+    display-window: "  Windows";
+    show-icons: true;
+}
+
+* {
+    bg0:     #282a36;
+    bg1:     #44475a;
+    bg2:     #6272a4;
+    fg0:     #f8f8f2;
+    fg1:     #bfbfbf;
+    accent:  #6272a4;
+    urgent:  #ff5555;
+
+    background-color: @bg0;
+    text-color: @fg0;
+    border-color: @accent;
+}
+
+window {
+    border: 2px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: @bg0;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    border: 0 0 2px 0;
+    border-color: @accent;
+    padding: 10px;
+    spacing: 10px;
+    text-color: @fg0;
+}
+
+prompt {
+    text-color: @accent;
+    padding: 5px;
+}
+
+entry {
+    text-color: @fg0;
+    padding: 5px;
+    placeholder: "Search...";
+    placeholder-color: @fg1;
+}
+
+listview {
+    border: 0;
+    padding: 10px 0;
+    scrollbar: true;
+    lines: 10;
+}
+
+element {
+    border: 0;
+    padding: 8px 10px;
+    spacing: 10px;
+    text-color: @fg0;
+}
+
+element normal {
+    background-color: @bg0;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @bg0;
+}
+
+element normal.active {
+    background-color: @bg2;
+    text-color: @fg0;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg0;
+    border-radius: 5px;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @bg0;
+}
+
+element selected.active {
+    background-color: @accent;
+    text-color: @bg0;
+}
+
+scrollbar {
+    width: 8px;
+    border: 0;
+    handle-width: 8px;
+    padding: 0;
+    handle-color: @accent;
+    background-color: @bg1;
+}
+
+message {
+    border: 2px 0 0 0;
+    border-color: @accent;
+    padding: 10px;
+    text-color: @fg0;
+}
+
+textbox {
+    text-color: @fg0;
+}

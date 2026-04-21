@@ -1,0 +1,10 @@
+[init]
+	defaultbranch = main
+
+[user]
+	name = Saurabh
+	email = 65000076+EnhancedProtection@users.noreply.github.com
+
+[push]
+  default = current
+  autoSetupRemote = true

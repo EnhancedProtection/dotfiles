@@ -1,0 +1,75 @@
+general {
+    colors = false
+    interval = 2
+    output_format = "i3bar"
+    separator = " | "
+}
+
+# The order determines the layout from left to right on your bar
+# order += "disk /"
+order += "volume master"
+order += "ethernet _first_"
+order += "wireless _first_"
+order += "cpu_usage"
+order += "memory"
+order += "battery 0"
+order += "time"
+
+# Shows remaining storage space on your root partition
+disk "/" {
+    format = "󰋊 %avail"
+}
+
+volume master {
+    format = "♪ %volume"
+    format_muted = "♪ mute"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+# Configure the CPU usage module
+cpu_usage {
+    format = "󰻠 %usage"
+    max_threshold = 75
+    # format_above_threshold = "󰻠 %usage (HIGH)"
+    degraded_threshold = 25
+}
+
+# RAM Usage Module
+memory {
+    memory_used_method = classical
+    format = "󰍛 %used"
+    threshold_degraded = "10%"
+    format_degraded = "MEMORY LOW: %free"
+}
+
+# Shows Ethernet status (hides when cable is unplugged)
+ethernet _first_ {
+    format_up = "󰈀 %ip"
+    format_down = ""
+}
+
+# Shows Wi-Fi status and signal strength
+wireless _first_ {
+    format_up = "%essid (%ip)"
+    format_down = ""
+}
+
+battery 0 {
+    last_full_capacity = true
+    format = "%status %percentage"
+    format_down = "No battery"
+    status_chr = "⚡"
+    status_bat = "🔋"
+    status_unk = "?"
+    status_full = "☻"
+    path = "/sys/class/power_supply/BAT0/uevent"
+    low_threshold = 10
+    threshold_type = percentage
+    integer_battery_capacity = true
+}
+
+time {
+    format = " %a %Y-%m-%d %H:%M "
+}
