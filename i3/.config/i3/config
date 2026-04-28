@@ -48,7 +48,7 @@ exec --no-startup-id kdeconnect-indicator
 font pango:JetBrainsMonoNL Nerd Font 10
 
 # start zen browser
-bindsym $mod+z exec ~/.local/bin/zen
+bindsym $mod+z exec firefox
 
 # Used for screenshot
 bindsym Print exec scrot --format screenshot_Y-m-d_H-M-S.png
@@ -249,12 +249,12 @@ for_window [window_type="splash"] floating enable, move position center
 
 # Application workspace assignments
 assign [class="firefox"] $ws1
-assign [class="zen"] $ws1
 assign [class="Zed"] $ws2
 assign [class="Code"] $ws2
 assign [class="Telegram"] $ws4
 assign [class="dolphin"] $ws3
 assign [class="vlc"] $ws5
+assign [class="ffplay"] $ws5
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
