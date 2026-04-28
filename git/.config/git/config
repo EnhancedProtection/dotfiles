@@ -4,7 +4,14 @@
 [user]
 	name = Saurabh
 	email = 65000076+EnhancedProtection@users.noreply.github.com
+	signingkey = /home/saurabh/.ssh/id_rsa
 
 [push]
   default = current
   autoSetupRemote = true
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
