@@ -35,8 +35,8 @@ client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
 set $mod Mod4
 
 # Custom Settings
-exec --no-startup-id picom --experimental-backends
-exec --no-startup-id feh --bg-scale ~/.config/backgrounds/nice-blue-background.png
+exec --no-startup-id picom --blur-method gaussian
+exec --no-startup-id feh --bg-scale ~/.config/backgrounds/debian-dark-background.png
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id kdeconnect-indicator
