@@ -9,7 +9,7 @@ UseFontBrailleChararacters=true
 UseFontLineChararacters=false
 
 [Cursor Options]
-CursorShape=1
+CursorShape=2
 
 [General]
 Command=/bin/zsh
