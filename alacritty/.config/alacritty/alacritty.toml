@@ -1,0 +1,52 @@
+[env]
+TERM = "alacritty"
+
+[font]
+size=10
+
+[font.normal]
+family="Maple Mono NF CN"
+
+[window]
+decorations = "full"
+startup_mode = "Maximized"
+
+[window.padding]
+x = 20
+
+[cursor.style]
+shape = "Underline"
+blinking = "On"
+
+[colors.primary]
+background = "#171b1f"
+foreground = "#e7edf3"
+
+[colors.cursor]
+text = "#171b1f"
+cursor = "#c8d3dd"
+
+[colors.selection]
+text = "#e7edf3"
+background = "#26303a"
+
+[colors.normal]
+black   = "#171b1f"
+red     = "#ff6673"
+green   = "#7fd66b"
+yellow  = "#f1de6b"
+blue    = "#66b8ff"
+magenta = "#c59bff"
+cyan    = "#72d6f7"
+white   = "#f2fffc"
+
+
+[colors.bright]
+black   = "#6b7678"
+red     = "#ff6d7e"
+green   = "#a2e57b"
+yellow  = "#ffed72"
+blue    = "#82b8c8"
+magenta = "#baa0f8"
+cyan    = "#7cd5f1"
+white   = "#f2fffc"
